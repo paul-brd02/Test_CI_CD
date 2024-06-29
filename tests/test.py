@@ -31,4 +31,4 @@ class TestPersonnage(TestCase):
 
     def test_point_attaque(self):
         personnage = Personnage()
-        self.assertEqual(50, personnage.get_point_attaque())
+        self.assertEqual(80, personnage.get_point_attaque())
