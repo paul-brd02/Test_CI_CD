@@ -29,8 +29,8 @@ jobs:
       if: failure()
       run: |
         git reset --hard HEAD~1
-        git checkout -b failures/${{ github.run_number }}
-        git push origin failures/${{ github.run_number }}
+        git checkout -b failures/commit_number_${{ github.run_number }}
+        git push origin failures/commit_number_${{ github.run_number }}
         echo "Test failed, rolled back and pushed to failures branch"
 
     - name: Merge develop to main
